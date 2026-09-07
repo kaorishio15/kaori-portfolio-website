@@ -1,0 +1,118 @@
+/* ============================================================
+   Design tokens
+   Light blue is the default — a porcelain background with a
+   deep "Wedgwood blue" ink and a muted gold for warmth, in the
+   spirit of fine stationery rather than a software dashboard.
+   Dark mode is a midnight-blue counterpart, not a black inversion.
+   ============================================================ */
+
+:root {
+  --font-display: 'Fraunces', 'Iowan Old Style', serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'DM Mono', 'SFMono-Regular', Consolas, monospace;
+
+  --radius-sm: 3px;
+  --radius-md: 6px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Light (default) */
+  --color-porcelain: #f4f8fb;
+  --color-white: #ffffff;
+  --color-ink: #1c2b3a;
+  --color-slate: #5a6f83;
+  --color-wedgwood: #3b6e91;
+  --color-powder: #7fa0bb;
+  --color-gold: #b9924f;
+
+  --color-bg: var(--color-porcelain);
+  --color-bg-raised: var(--color-white);
+  --color-text: var(--color-ink);
+  --color-text-muted: var(--color-slate);
+  --color-accent: var(--color-wedgwood);
+  --color-secondary: var(--color-powder);
+  --color-tertiary: var(--color-gold);
+  --color-border: #dce6ee;
+  --color-border-strong: #b9cddc;
+}
+
+[data-theme='dark'] {
+  --color-bg: #0e1b28;
+  --color-bg-raised: #142433;
+  --color-text: #e9f1f7;
+  --color-text-muted: #90a8bd;
+  --color-accent: #8fc1e3;
+  --color-secondary: #4d7492;
+  --color-tertiary: #cdac6c;
+  --color-border: #1f3244;
+  --color-border-strong: #345273;
+}
+
+html {
+  color-scheme: light;
+}
+[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   Tailwind v4 theme mapping — exposes the tokens above as
+   Tailwind utilities: bg-bg, text-accent, font-display, etc.
+   ============================================================ */
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-bg-raised: var(--color-bg-raised);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-accent: var(--color-accent);
+  --color-secondary: var(--color-secondary);
+  --color-tertiary: var(--color-tertiary);
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
