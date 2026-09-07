@@ -1,96 +1,45 @@
-# Kaori Shioyama — Portfolio
+# Portfolio Website — Kaori Shioyama
 
-A personal portfolio site built with React, TypeScript, Vite, and Tailwind CSS.
+[![Built with React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 
-## Getting started
+Welcome! I'm Kaori, a Computer Science student at Texas A&M University. 
 
-```bash
-pnpm install
-pnpm dev
-```
+This repository contains the source code for my personal portfolio website, where I showcase software projects, hackathon submissions, technical write-ups, and verified qualifications.
 
-Then open the local URL Vite prints (usually `http://localhost:5173`).
+---
 
-To build for production:
+## 📌 Features & Sections
 
-```bash
-pnpm build
-pnpm preview
-```
+- **Projects:** Featured software engineering and technical builds with interactive links, tech stack details, and repository access.
+- **Hackathons:** Highlighting team hackathon projects, awards, Devpost links, and code repos.
+- **About Me:** Overview of my academic journey, technical interests, and leadership roles.
+- **Qualifications & Skills:** Clean categorization of programming languages, frameworks, cybersecurity tools, and certifications.
+- **Blog / Learning Tracker:** Documenting hands-on practice across platforms like TryHackMe and PicoCTF, plus home lab setups.
 
-## What's on the site
+---
 
-- **Hero** — name, Texas A&M / CS intro, and links to GitHub, LinkedIn, and email.
-- **Projects** — pulled from `src/data/projects.ts`.
-- **Hackathons** — pulled from `src/data/hackathons.ts`.
-- **About** — headshot, background, interests, and what I'm looking for.
-- **Skills** — grouped by category, pulled from `src/data/skills.ts`.
+## 🛠️ Tech Stack & Design
 
-A light/dark theme toggle lives in the navbar (dark is the default).
+- **Framework & Language:** React, TypeScript, Vite
+- **Styling & Icons:** Tailwind CSS, Lucide React, FontAwesome / React Icons
+- **Design Palette:** Minimalist steel-blue and ice-white theme with responsive layouts and custom dark/light mode accents.
 
-## Project structure
+---
 
-```
-public/
-  images/            → static images (headshot, project screenshots)
+## 🚀 Getting Started
 
-src/
-  app/
-    App.tsx          → composes all sections into the page
+To run this project locally on your machine:
 
-  components/
-    layout/
-      Navbar.tsx      → nav links, mobile menu, active-section highlight, theme toggle
-      Footer.tsx      → copyright + credit line
+### Prerequisites
 
-    sections/
-      Hero.tsx        → landing/header section
-      Projects.tsx    → renders a ProjectCard for each entry in data/projects.ts
-      Hackathons.tsx  → renders a HackathonCard for each entry in data/hackathons.ts
-      About.tsx       → headshot + bio
-      Skills.tsx      → renders skill groups from data/skills.ts
+Ensure you have [Node.js](https://nodejs.org/) installed (v18+ recommended).
 
-    ui/
-      SectionLabel.tsx   → the small "01 / Projects" marker above each section
-      ProjectCard.tsx    → one project's card
-      HackathonCard.tsx  → one hackathon's entry
+### Installation & Local Setup
 
-  data/
-    projects.ts     → edit this to add/remove/update projects — no UI code needed
-    hackathons.ts   → same, for hackathons
-    skills.ts       → same, for skills, grouped by category
-    navigation.ts   → the navbar's links
-
-  styles/
-    fonts.css       → Google Fonts imports (Fraunces, DM Sans, DM Mono)
-    tailwind.css    → Tailwind entry point
-    theme.css       → color tokens, light/dark theme variables, base styles
-    index.css       → combines the three above
-
-  main.tsx          → React entry point
-```
-
-## Editing content
-
-You generally don't need to touch component code to update the site's content:
-
-- **New project** → add an object to `src/data/projects.ts`.
-- **New hackathon** → add an object to `src/data/hackathons.ts`.
-- **New skill** → add a string to the right category in `src/data/skills.ts`.
-- **New nav link** → add an entry to `src/data/navigation.ts`.
-
-## Replacing placeholder content
-
-A few things are placeholders and worth swapping out before publishing:
-
-- `public/images/headshot.jpg` — currently a generated monogram placeholder.
-- `public/images/algovisualizer-image.png` — currently a generated placeholder chart.
-- GitHub/LinkedIn/email links in `Hero.tsx`, and GitHub/Devpost links in `data/projects.ts` and `data/hackathons.ts`.
-- The Blog link in `data/navigation.ts` points to a placeholder URL.
-
-## Built with
-
-- React + TypeScript
-- Vite
-- Tailwind CSS v4
-- lucide-react (icons)
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/kaorishio15/kaori-portfolio-website.git](https://github.com/kaorishio15/kaori-portfolio-website.git)
+   cd kaori-portfolio-website
