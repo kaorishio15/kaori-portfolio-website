@@ -38,13 +38,13 @@ export const certificates: Certificate[] = [
     title: 'AZ-900 | Microsoft Certified: Azure Fundamentals',
     issuer: 'Microsoft',
     date: 'Issued Jan 2025',
-    credentialUrl: 'https://learn.microsoft.com/en-us/users/kaorishioyama-2187/credentials/36e9c6a91dd122c?ref=https%3A%2F%2Fwww.linkedin.com%2F',
+    credentialUrl: 'https://learn.microsoft.com/en-us/users/kaorishioyama-2187/credentials/3a6e9c6a91dd122c?ref=https%3A%2F%2Fwww.linkedin.com%2F',
   },
   {
     title: 'Google AI Essentials',
     issuer: 'Google',
     date: 'Issued Jan 2025',
-    credentialUrl: '/certificates/google-ai-essentials.pdf', // or Coursera verification link
+    credentialUrl: 'https://coursera.org/share/15d2c3ca4bf21f2577842167f80c3f20', // or Coursera verification link
   },
   {
     title: 'CompTIA Security+ Certification',

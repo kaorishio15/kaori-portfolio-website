@@ -35,11 +35,44 @@ To run this project locally on your machine:
 
 ### Prerequisites
 
-Ensure you have [Node.js](https://nodejs.org/) installed (v18+ recommended).
+- [Node.js](https://nodejs.org/) v18+ (recommended)
+- [pnpm](https://pnpm.io/) (this repo uses a `pnpm-lock.yaml`)
+
+If you don't have pnpm yet:
+
+```bash
+npm install -g pnpm
+```
 
 ### Installation & Local Setup
 
 1. **Clone the repository:**
+
    ```bash
-   git clone [https://github.com/kaorishio15/kaori-portfolio-website.git](https://github.com/kaorishio15/kaori-portfolio-website.git)
+   git clone https://github.com/kaorishio15/kaori-portfolio-website.git
    cd kaori-portfolio-website
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   pnpm install
+   ```
+
+3. **Start the development server:**
+
+   ```bash
+   pnpm dev
+   ```
+
+   Vite will print a local URL, usually `http://localhost:5173`. Open that in your browser.
+
+If you already have the repo cloned, skip step 1 and run `pnpm install` then `pnpm dev` from the project folder.
+
+### Other scripts
+
+- `pnpm build` — production build
+- `pnpm preview` — serve the production build locally
+- `pnpm lint` — run ESLint
+
+If you prefer npm instead of pnpm, you can use `npm install` and `npm run dev` (and the matching `npm run` commands above).

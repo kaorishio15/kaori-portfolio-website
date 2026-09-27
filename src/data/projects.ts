@@ -23,6 +23,17 @@ export const projects: Project[] = [
     github: 'https://github.com/kaorishio15/algovisualizer',
   },
   {
+    id: 'fileguard',
+    title: 'Fileguard',
+    category: 'Cybersecurity / Full-Stack Web App',
+    year: '2026',
+    description:
+      'A lightweight, stateless Python tool that safely analyzes untrusted files using static heuristics to identify potential malware or phishing indicators and produces an explainable 0–100 threat score without executing the files.',
+    tags: ['Python', 'Flask', 'JavaScript', 'SQLite'],
+    image: '/images/fileguard-thumbnail.png',
+    github: 'https://github.com/kaorishio15/fileguard.git',
+  },
+  {
     id: 'tradescope',
     title: 'TradeScope',
     category: 'Data / Finance',
@@ -35,22 +46,12 @@ export const projects: Project[] = [
   {
     id: 'blog',
     title: 'Technical Blog',
-    category: 'Learning / Cybersecurity',
+    category: 'Learning',
     year: '2026',
     description:
       'Developed a personal technical blog to document ongoing learning in programming and cybersecurity, featuring an automated content system and reusable client-side architecture for dynamically discovering, rendering, and organizing blog posts.',
     tags: ['React', 'TypeScript', 'MDX'],
     image: '/images/technical-blog-thumbnail.png',
     github: 'https://github.com/kaorishio15/technical-blog',
-  },
-  {
-    id: 'campus-eats',
-    title: 'CampusEats',
-    category: 'Full-Stack Web App',
-    year: '2025',
-    description:
-      'A campus dining companion that aggregates dining-hall menus and wait times into a single feed, with a Node/Express backend and a React front end deployed for A&M students.',
-    tags: ['Next.js', 'Node.js', 'SQL'],
-    github: 'https://github.com/kaorishioyama/campus-eats',
   },
 ]
